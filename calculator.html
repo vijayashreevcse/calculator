@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<input lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h{
+            color: blueviolet;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+            
+        }    
+        #c{
+            color: red;
+        }
+        .container{
+            margin: auto;
+            height: 500px;
+            width: 300px;
+            border: 6px solid black;
+            background-color:lightcoral;
+            border-radius: 10px;
+            
+        }
+        .equal{
+            height: 50px;
+            width: 50px;
+            border-radius: 20px;
+            margin-left: 12px;
+            background-color: darkgray;
+            color:red;
+        }
+        .b{
+            background-color: darkgray;
+            height: 50px;
+            width: 50px;
+            margin-left:12px;
+            border-radius: 20px;
+            margin-bottom: 7px;
+            margin-right: 5px;
+        }
+        .display{
+            margin-left: 22px;
+            margin-bottom: 20px;
+            border: 3px solid black;
+            width: 220px;
+            height: 50px;
+            text-align: center;
+            background-color: bisque;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 class="h">calculator</h1>
+    <div class="container"><br>
+        <form>
+     <input type="text" id=res class="display" name="display" placeholder="enter the value" >
+     <br><br>
+     <form>
+        <input type="button" value="(" onclick="display.value +='(' " class="b"></input>
+        <input type="button" value=")" onclick="display.value +=')' " class="b" ></input>
+        <input type="button" value="del" onclick="display.value =display.value.toString().slice(0,-1)"class="b" id="d"></input>
+        <input type="button" value="c" onclick="display.value =display.value='' "class="b" id="c"></input>
+        <br><br>
+            <input type="button" value="1" onclick="display.value +='1' " class="b"></input>
+            <input type="button" value="2" onclick="display.value +='2' " class="b"></input>
+            <input type="button" value="3" onclick="display.value +='3' " class="b"></input>
+            <input type="button" value="/" onclick="display.value +='/' "class="b"></input>
+            <br><br>
+     <input type="button" value="4" onclick="display.value +='4' " class="b"></input>
+     <input type="button" value="5" onclick="display.value +='5' " class="b"></input>
+     <input type="button" value="6" onclick="display.value +='6' " class="b"></input>
+     <input type="button" value="*" onclick="display.value +='*' " class="b"></input>
+    
+     <br><br>
+     
+     <input type="button" value="7" onclick="display.value +='7' " class="b"></input>
+     <input type="button" value="8" onclick="display.value +='8' " class="b"></input>
+     <input type="button" value="9" onclick="display.value +='9' " class="b"></input>
+     <input type="button" value="-" onclick="display.value +='-' "class="b"></input>
+    
+     <br><br>
+    
+     <input type="button" value="." onclick="display.value +='.' " class="b"></input>
+     <input type="button" value="0" onclick="display.value +='0' " class="b"></input>
+     <input type="button" value="=" onclick="display.value =eval(display.value)" class="equal"></input>
+     <input type="button" value="+" onclick="display.value +='+' " class="b"></input>
+     
+     <br><br>
+     </form>
+    </div>
+    </div>
+     <script>
+        
+       function del(){
+        document.getElementById('res').value.toString().slice(0,-1) ;
+       }
+        function clear(){
+           var a=document.getElementById('res').value ;
+           a='';
+           document.getElementById('res').value=a;
+
+        }
+        // function result(){
+        //     var r=document.getElementById('res').value;
+        //     var r1=eval(r);
+        //     document.getElementById('res').value=r1;
+        // }
+        function clear(){
+            var c=document.getElementById('res').value;
+            c.value=" ";
+        
+        }
+        
+       
+     </script>
+</div>
+</body>
+</html>
